@@ -1,5 +1,5 @@
 # roller
-This is a basic implementation of a rolling file appender.Goal is to extract the JSON body from incoming web requests, and serialize the request body with Google protobuf into disk. This serialized file should roll after a configured time out.
+This is a basic implementation of a rolling file appender. The goal is to extract the JSON body from incoming web requests, and serialize the request body with Google protobuf into disk. This serialized file should roll after a configured time out.
 
 # Build
 `mvn clean package -DskipTests=true`
