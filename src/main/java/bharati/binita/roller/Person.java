@@ -37,7 +37,6 @@ public class Person implements Serializable{
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return "{id : "+ this.id +"}";
 	}
 

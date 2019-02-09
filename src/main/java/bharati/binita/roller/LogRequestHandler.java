@@ -49,8 +49,6 @@ public class LogRequestHandler extends HttpServlet{
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//super.doPost(req, resp);
 		BufferedReader br = req.getReader();
 		Gson gson = new Gson();
 		Person person = gson.fromJson(br, Person.class);

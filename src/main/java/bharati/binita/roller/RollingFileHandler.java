@@ -59,7 +59,6 @@ public class RollingFileHandler {
 			personQ = new LinkedBlockingQueue<Person>(
 					Integer.parseInt(Main.prop.getProperty("max.concurrent.request")));
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

@@ -36,7 +36,6 @@ public class ProtoHelper {
 		try {
 			protoPersonInstance.writeDelimitedTo(fos);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}		
 	}
@@ -52,7 +51,6 @@ public class ProtoHelper {
 				personCount++;
 					
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}		

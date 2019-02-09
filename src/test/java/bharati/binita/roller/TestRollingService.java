@@ -52,7 +52,6 @@ public class TestRollingService {
 					try {
 						runProcess("java -cp installation/target/roller-0.0.1-SNAPSHOT.jar bharati.binita.roller.Main &");
 					} catch (Exception e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				}
@@ -68,7 +67,6 @@ public class TestRollingService {
 					prop.load(input);
 				
 					} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
@@ -77,11 +75,9 @@ public class TestRollingService {
 			r1 = new Runnable() {
 				
 				public void run() {
-					// TODO Auto-generated method stub
 					try {
 						writeToLog();
 					} catch (Exception e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				}
