@@ -16,17 +16,19 @@
 
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-server -->
+	<!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-server -->
 	<dependency>
     	<groupId>org.eclipse.jetty</groupId>
     	<artifactId>jetty-server</artifactId>
-    	<version>9.4.7.RC0</version>
+    	<version>9.4.14.v20181114</version>
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-servlet -->
 	<dependency>
     	<groupId>org.eclipse.jetty</groupId>
     	<artifactId>jetty-servlet</artifactId>
-    	<version>9.4.7.RC0</version>
+    	<version>9.4.14.v20181114</version>
 	</dependency>
+
 	<!-- https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java -->
 	<dependency>
     	<groupId>com.google.protobuf</groupId>
@@ -43,7 +45,7 @@
 	<dependency>
     	<groupId>org.eclipse.jetty</groupId>
     	<artifactId>jetty-client</artifactId>
-    	<version>9.4.7.RC0</version>
+    	<version>9.4.14.v20181114</version>
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/junit/junit -->
 	<dependency>
