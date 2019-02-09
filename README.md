@@ -6,7 +6,7 @@ This is a basic implementation of a rolling file appender. The goal is to extrac
 
 # Installation
 ## Pre-requisites
-The target VM should have docker installed.
+The target VM should have Docker installed.
 
 ## Steps
 Copy the installation directory into the target VM.
