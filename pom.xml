@@ -33,8 +33,9 @@
 	<dependency>
     	<groupId>com.google.protobuf</groupId>
     	<artifactId>protobuf-java</artifactId>
-    	<version>3.7.0-rc1</version>
+    	<version>3.6.1</version>
 	</dependency>
+
 	<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
 	<dependency>
     	<groupId>com.google.code.gson</groupId>
