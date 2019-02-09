@@ -30,12 +30,10 @@ public class Main {
 		try {
 				//Load property file
 				InputStream input = Main.class.getClassLoader().getResourceAsStream("config.properties");
-				prop.load(input);
-			
-				} catch (Exception e) {
-			// TODO Auto-generated catch block
+				prop.load(input);		
+			} catch (Exception e) {
 			e.printStackTrace();
-		}
+			}
 		
 		 /**
 		    * Clear the existing log files folder -- This is done just to verify test case, this may not be 
@@ -53,20 +51,13 @@ public class Main {
 		
 		//Init the RollingFileHandler
 		RollingFileHandler rfh = RollingFileHandler.getInstance();
-		rfh.handleIncoming();
-				
-		
+		rfh.handleIncoming();		
 	}
 	
-	static void startJetty() throws Exception {
-		 	
+	static void startJetty() throws Exception {		 	
 		 	Server server = new Server(7070);
 	        ServletContextHandler handler = new ServletContextHandler(server, "/hichki");
 	        handler.addServlet(LogRequestHandler.class, "/");
-	        server.start();
-	 
+	        server.start(); 
      }
-	
-	
-
 }

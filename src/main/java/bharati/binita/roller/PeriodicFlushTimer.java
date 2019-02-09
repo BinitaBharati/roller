@@ -11,6 +11,9 @@ import java.util.concurrent.TimeUnit;
 /**
  * 
  * @author binita.bharati@gmail.com
+ * This timer will continually set a volatile flushTimerReady to true.
+ * flushTimerReady is used by RollingFileHandler thread to decide when flush
+ * has to be done. 
  *
  */
 

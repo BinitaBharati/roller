@@ -22,8 +22,7 @@ public class ProtoHelper {
 	public static byte[] serializeToProto(Person person) {
 		PersonProto.Person protoPersonInstance = PersonProto.Person.newBuilder().setId(person.getId()).
 				setName(person.getName()).build();
-		return protoPersonInstance.toByteArray();
-		
+		return protoPersonInstance.toByteArray();		
 	}
 	
 	public static Person deserializeFromProto(byte[] byteAry) throws Exception {
@@ -39,8 +38,7 @@ public class ProtoHelper {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
+		}		
 	}
 	
 	public static int readDelimitedEntriesFromFile(InputStream fos) {
@@ -57,9 +55,6 @@ public class ProtoHelper {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}
-		
-		
+		}		
 	}
-
 }
