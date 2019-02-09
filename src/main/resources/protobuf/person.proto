@@ -1,0 +1,7 @@
+syntax = "proto3";
+option java_outer_classname = "PersonProto";
+option java_package = "noddus.test.protobuf";
+message Person {
+    int32 id = 1;
+    string name = 2;
+}
