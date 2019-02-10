@@ -16,9 +16,9 @@ import org.apache.log4j.Logger;
 
 /**
  * 
- * @author binita.bharati@gmail.com
- * This class holds a LinkedBlockingQueue where concurrent incoming request dump their data.
- * This class uses a single thread to read the LinkedBlockingQueue for further processing.
+ * @author binita.bharati@gmail.com This class holds a LinkedBlockingQueue where
+ *         concurrent incoming request dump their data. This class uses a single
+ *         thread to read the LinkedBlockingQueue for further processing.
  *
  */
 
@@ -68,8 +68,8 @@ public class RollingFileHandler {
 	 */
 	public synchronized void handleIncoming() {
 		List<Person> tmpList = new ArrayList<Person>();
-		while (true) {
-			try {
+		while (true) {		
+			try {				
 				if (periodicFlushTimer.isFlushTimerReady()) {
 					if (rollEverEmptyFile || fileHasData) {
 						flushFile();
@@ -78,17 +78,20 @@ public class RollingFileHandler {
 					}
 				}
 				Person myPerson = personQ.poll();
-				if (myPerson != null) {
+				if (myPerson == null) {
+					Thread.sleep(100);
+				} else {
 					ProtoHelper.writeDelimitedToFile(fos, myPerson);
 					if (!fileHasData) {
 						fileHasData = true;
 					}
-				}
-
-			} catch (Exception e) {
+				}				
+			}
+			 catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
+
 	}
 
 	private void flushFile() throws Exception {
