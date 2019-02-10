@@ -9,7 +9,7 @@ This is a basic implementation of a rolling file appender. The goal is to extrac
 The target VM should have Docker installed.
 
 ## Steps
-Copy the installation directory into the target VM.
+Copy the `installation` directory into the target VM.
 ```
 dos2unix installation/setup/target/scripts/install_roller_main.sh installation/setup/target/scripts/install_roller_main.sh
 chmod +x installation/setup/target/scripts/install_roller_main.sh
