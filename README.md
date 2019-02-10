@@ -6,10 +6,10 @@ This is a basic implementation of a rolling file appender. The goal is to extrac
 
 # Installation
 ## Pre-requisites
-The target VM should have Docker installed.
+The target VM should have Docker installed. The below steps will build and run a Docker container; the container hosts a web service listening on port 7070.
 
 ## Steps
-Copy the installation directory into the target VM.
+Copy the `installation` directory into the target VM.
 ```
 dos2unix installation/setup/target/scripts/install_roller_main.sh installation/setup/target/scripts/install_roller_main.sh
 chmod +x installation/setup/target/scripts/install_roller_main.sh
