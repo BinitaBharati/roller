@@ -109,16 +109,19 @@ public class RollingFileHandler {
 	 * @param person This method will be invoked concurrently by multiple request
 	 *               threads
 	 */
-	public void receiveIncoming(Person person) {
+	public boolean receiveIncoming(Person person) {
 		Thread t1 = Thread.currentThread();
-		logger.info(t1.getName() + " --> About to put " + person + " to queue");
-		// The below call will wait if the LinkedBlockingQueue capacity is exceeded.
+		logger.info(t1.getName() + " --> About to put " + person + " to queue");	
 		try {
-			personQ.put(person);
-		} catch (InterruptedException e) {
+			//The below call will throw Exception if LinkedBlockingQueue capacity is exceeded.
+			//Catch that and inform the client about the failure of the operation
+			personQ.add(person);
+		} catch (Exception e) {
 			e.printStackTrace();
+			return false;
 		}
 		logger.info(t1.getName() + " --> Finished putting " + person + " to queue");
+		return true;
 	}
 
 }

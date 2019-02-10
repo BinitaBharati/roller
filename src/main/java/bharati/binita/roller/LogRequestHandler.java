@@ -53,9 +53,15 @@ public class LogRequestHandler extends HttpServlet{
 		Gson gson = new Gson();
 		Person person = gson.fromJson(br, Person.class);
 		RollingFileHandler rfh = RollingFileHandler.getInstance();
-		rfh.receiveIncoming(person);
-		resp.setStatus(HttpStatus.OK_200);
-        resp.getWriter().println("LogRequestHandler");
+		boolean status = rfh.receiveIncoming(person);
+		if (status) {
+			resp.setStatus(HttpStatus.OK_200);
+	        resp.getWriter().println("SUCCESS!");
+		} else {
+			resp.setStatus(HttpStatus.INTERNAL_SERVER_ERROR_500);
+	        resp.getWriter().println("FAILED!");
+		}
+		
 	}
 
 }
