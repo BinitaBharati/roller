@@ -6,7 +6,7 @@ This is a basic implementation of a rolling file appender. The goal is to extrac
 
 # Installation
 ## Pre-requisites
-The target VM should have Docker installed.
+The target VM should have Docker installed. The below steps will build and run a Docker container, with a web service listening on port 7070.
 
 ## Steps
 Copy the `installation` directory into the target VM.
